@@ -1,4 +1,4 @@
-const storage = require('node-persist');
+const storage = require('./data-store');
 const FileSystem = require('./file-system');
 
 class Kernel {
