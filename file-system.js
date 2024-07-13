@@ -1,4 +1,4 @@
-import { parseDirectoryContents } from "./system-utils";
+const utils = require("./system-utils.js");
 /* File system uses local storage to store filesystem.
     It provides a simple API to read and write file information.
     It also provides a way to create directories and delete files. */
@@ -29,7 +29,7 @@ class FileSystem {
     }
     console.log("fs:getFiles:cursor:", this.cursor);
     console.log("fs:getFiles:files in current dir:", files);
-    const parsedFiles = parseDirectoryContents(files);
+    const parsedFiles = utils.parseDirectoryContents(files);
     console.log("fs:getFiles:parsedFiles:", parsedFiles);
     return parsedFiles;
   }
