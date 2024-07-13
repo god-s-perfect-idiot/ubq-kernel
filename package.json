@@ -2,7 +2,7 @@
   "name": "ubq-kernel",
   "version": "1.0.0",
   "description": "The file system is a tree of directories and files. The root of the tree is the root directory, which contains all other files and directories on the system. Each directory contains a list of files and directories. A VFS (Virtual File System) is a software layer that provides an interface to the file system. It abstracts the underlying file system and provides a common interface to access files and directories.",
-  "main": "data-store.js",
+  "main": "kernel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
