@@ -1,5 +1,5 @@
-import storage from "./data-store.js";
-import FileSystem from "./file-system.js";
+const storage = require('node-persist');
+const FileSystem = require('./file-system');
 
 class Kernel {
   constructor() {
