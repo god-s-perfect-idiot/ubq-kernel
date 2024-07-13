@@ -1,7 +1,7 @@
 
 function findType(file) {
-    if (typeof file !== 'string') return 'directory';
-    switch (file.slice(0, 1)) {
+    if (typeof Object.values(file)[0] !== 'string') return 'directory';
+    switch (Object.keys(file)[0].slice(0, 1)) {
         case '1': 
             return 'image';
         case '2':
@@ -17,7 +17,7 @@ function findType(file) {
 function parseDirectoryContents(files) {
     const contents = Object.entries(files).map(([name, file]) => {
         return {
-            name: name.slice(2, name.length -1), 
+            name: name.slice(2, name.length), 
             type: findType({[name]: file}),
             content: file
         };

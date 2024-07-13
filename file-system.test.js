@@ -111,16 +111,23 @@ fs.updateFile("file5", "4", "new content");
 console.log("===> expected output : { 4.file5: 'new content' }");
 fs.dumpFiles(); // { 4.file5: "new content" }
 
+console.log(
+  "\n\n-------------------------- Test 14 : Get Parsed Files --------------------------\n\n"
+);
+const res = fs.getParsedFiles();
+console.log("===> expected output : [ { name: 'file5', type: 'video', content: 'new content' } ]");
+console.log(res); // [ { name: "file5", type: "video", content: "new content" } ]  
+
 
 console.log(
-  "\n\n-------------------------- Test 14 : Reset Cursor --------------------------\n\n"
+  "\n\n-------------------------- Test 15 : Reset Cursor --------------------------\n\n"
 );
 fs.resetCursor();
 console.log("===> expected output : []");
 fs.getFullCursor(); // []
 
 console.log(
-  "\n\n-------------------------- Test 15 : Reset FS --------------------------\n\n"
+  "\n\n-------------------------- Test 16 : Reset FS --------------------------\n\n"
 );
 fs.resetFS();
 console.log("===> expected output : {}");
